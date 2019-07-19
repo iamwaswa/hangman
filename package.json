@@ -1,10 +1,11 @@
 {
   "name": "hangman",
+  "homepage": "http://iamwaswa.github.io/hangman",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "braces": "^3.0.2",
-    "eslint": "^6.0.1",
+    "eslint": "^5.16.0",
     "handlebars": "^4.1.2",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
@@ -16,6 +17,8 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -24,6 +27,7 @@
   "devDependencies": {
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
-    "enzyme-to-json": "^3.3.5"
+    "enzyme-to-json": "^3.3.5",
+    "gh-pages": "^2.0.1"
   }
 }
